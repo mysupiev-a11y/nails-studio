@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход для мастера</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fffafb; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; }
+        .login-card { width: 350px; padding: 30px; border-radius: 20px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); background: white; }
+        h4 { color: #ff8fab; font-weight: bold; margin-bottom: 25px; text-align: center; }
+        .form-control { border-radius: 12px; padding: 12px; border: 1px solid #eee; text-align: center; }
+        .btn-login { background: #ff8fab; color: white; border-radius: 12px; width: 100%; padding: 12px; font-weight: bold; border: none; margin-top: 15px; transition: 0.3s; }
+        .btn-login:hover { background: #fb6f92; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h4>Вход в кабинет</h4>
+        <form method="POST" action="/login">
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Введите пароль" required autofocus>
+            </div>
+            <button type="submit" class="btn-login shadow-sm">ВОЙТИ</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="/" style="color: #ccc; text-decoration: none; font-size: 0.8rem;">← На главную</a>
+        </div>
+    </div>
+</body>
+</html>

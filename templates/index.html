@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nails Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fffafb; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: #ff8fab; font-weight: bold; margin-top: 40px; text-transform: uppercase; letter-spacing: 2px; }
+        .main-card { background: white; border-radius: 30px; box-shadow: 0 15px 50px rgba(255,143,171,0.15); width: 100%; max-width: 550px; margin: 30px auto; padding: 40px; }
+        .form-label { font-weight: bold; color: #555; margin-bottom: 8px; display: block; }
+        .form-control, .form-select { border-radius: 12px; padding: 15px; border: 2px solid #fff0f3; margin-bottom: 20px; }
+        
+        /* Кнопка записи */
+        .btn-pink { background: #ff8fab; color: white; border-radius: 15px; padding: 18px; font-weight: bold; border: none; font-size: 1.2rem; width: 100%; transition: 0.3s; margin-bottom: 15px; }
+        .btn-pink:hover { background: #fb6f92; transform: scale(1.02); }
+
+        /* Новая кнопка связи */
+        .btn-call { 
+            background: white; 
+            color: #ff8fab; 
+            border: 2px solid #ff8fab; 
+            border-radius: 15px; 
+            padding: 15px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            width: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-call:hover { background: #fff0f3; color: #fb6f92; text-decoration: none; }
+        
+        .notice { font-size: 0.8rem; color: #888; margin-top: -10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>NAILS STUDIO</h1>
+    <div class="main-card">
+        <form action="/add_booking" method="POST">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" name="name" class="form-control" placeholder="Как к вам обращаться?" required>
+            
+            <label class="form-label">Выберите услугу</label>
+            <select name="service" class="form-select" required>
+                <option value="" disabled selected>Нажмите для выбора...</option>
+                <optgroup label="Маникюр">
+                    <option value="Обычный маникюр — 50 000 сум">Обычный маникюр — 50 000 сум</option>
+                    <option value="С покрытием гель-лак — 105 000 сум">С покрытием гель-лак — 105 000 сум</option>
+                    <option value="Хна-маникюр — 100 000 сум">Хна-маникюр — 100 000 сум</option>
+                </optgroup>
+                <optgroup label="Педикюр">
+                    <option value="Обычный педикюр — 110 000 сум">Обычный педикюр — 110 000 сум</option>
+                    <option value="Педикюр с гель-лаком — 140 000 сум">С покрытием гель-лак — 140 000 сум</option>
+                </optgroup>
+                <optgroup label="Уход за лицом">
+                    <option value="Коррекция бровей — 25 000 сум">Коррекция бровей — 25 000 сум</option>
+                    <option value="Уход за лицом — 40 000 сум">Уход за лицом — 40 000 сум</option>
+                </optgroup>
+            </select>
+
+            <label class="form-label">Удобное время</label>
+            <input type="datetime-local" name="time" class="form-control" required>
+            <p class="notice">Работаем до 18:00.</p>
+
+            <button type="submit" class="btn-pink shadow">ЗАБРОНИРОВАТЬ</button>
+            
+            <a href="tel:+998900995200" class="btn-call">
+                📞 СВЯЗАТЬСЯ СО МНОЙ
+            </a>
+        </form>
+    </div>
+    <a href="/login" style="color: #ff8fab; text-decoration: none; font-size: 0.8rem; margin-bottom: 40px; opacity: 0.7;">Кабинет мастера</a>
+</body>
+</html>
