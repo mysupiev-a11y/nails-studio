@@ -43,9 +43,9 @@
             <label class="form-label">Ваше имя</label>
             <input type="text" name="name" class="form-control" placeholder="Как к вам обращаться?" required>
             
-            <label class="form-label">Выберите услугу</label>
-            <select name="service" class="form-select" required>
-                <option value="" disabled selected>Нажмите для выбора...</option>
+            <label class="form-label">Выберите услуги (можно выбрать несколько)</label>
+            <select name="service" class="form-select" multiple required style="height: 120px;">
+                <option value="" disabled>Выберите нужные услуги...</option>
                 <optgroup label="Маникюр">
                     <option value="Обычный маникюр — 50 000 сум">Обычный маникюр — 50 000 сум</option>
                     <option value="С покрытием гель-лак — 105 000 сум">С покрытием гель-лак — 105 000 сум</option>
@@ -60,10 +60,11 @@
                     <option value="Уход за лицом — 40 000 сум">Уход за лицом — 40 000 сум</option>
                 </optgroup>
             </select>
+            <p class="notice" style="margin-top: -15px;">* На телефоне просто нажимайте на нужные услуги</p>
 
-            <label class="form-label">Удобное время</label>
+            <label class="form-label">Удобное время (Дата и Время)</label>
             <input type="datetime-local" name="time" class="form-control" required>
-            <p class="notice">Работаем до 18:00.</p>
+            <p class="notice">Работаем каждый день с 09:00 до 18:00.</p>
 
             <button type="submit" class="btn-pink shadow">ЗАБРОНИРОВАТЬ</button>
             

@@ -16,6 +16,13 @@
 <body>
     <div class="login-card">
         <h4>Вход в кабинет</h4>
+        
+        {% if error %}
+        <div class="alert alert-danger" style="border-radius: 12px; font-size: 0.9rem; text-align: center;">
+            {{ error }}
+        </div>
+        {% endif %}
+        
         <form method="POST" action="/login">
             <div class="mb-3">
                 <input type="password" name="password" class="form-control" placeholder="Введите пароль" required autofocus>
